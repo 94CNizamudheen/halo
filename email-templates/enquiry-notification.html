@@ -1,0 +1,62 @@
+<!--
+  Halo & Halo Events — "Plan Your Wedding" enquiry notification (EmailJS template)
+  ──────────────────────────────────────────────────────────────────────────────
+  Uses the SAME EmailJS service + public key as Allure; only this template is new.
+  Paste into EmailJS → Email Templates → Create New → "Code" view.
+
+  Template variables (sent by src/components/PlanForm.tsx):
+    {{from_name}}  {{from_email}}  {{phone}}  {{wedding_date}}  {{package}}  {{message}}
+
+  Template settings (outside this HTML):
+    To email   → the Halo inbox, e.g. hello@haloandhalo.events
+    Reply To   → {{from_email}}
+    From name  → Halo & Halo Website
+    Subject    → New wedding enquiry from {{from_name}}
+-->
+<div style="margin:0;padding:0;background-color:#f7f4ef;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f7f4ef;padding:32px 16px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background-color:#ffffff;border:1px solid #e4dccf;">
+          <tr>
+            <td style="background-color:#28231f;padding:36px 40px;text-align:center;">
+              <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;letter-spacing:1px;color:#f7f4ef;">HALO <span style="color:#c8ad7f;">&amp;</span> HALO</div>
+              <div style="margin-top:10px;font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#c8ad7f;">New Wedding Enquiry</div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:36px 40px 8px;">
+              <p style="margin:0;font-family:Georgia,serif;font-size:22px;color:#28231f;">{{from_name}} would like to plan their celebration.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:16px 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#28231f;">
+                <tr><td style="padding:10px 0;border-bottom:1px solid #efe8de;width:150px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#7c746c;">Email</td><td style="padding:10px 0;border-bottom:1px solid #efe8de;"><a href="mailto:{{from_email}}" style="color:#b98d83;text-decoration:none;">{{from_email}}</a></td></tr>
+                <tr><td style="padding:10px 0;border-bottom:1px solid #efe8de;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#7c746c;">Phone</td><td style="padding:10px 0;border-bottom:1px solid #efe8de;">{{phone}}</td></tr>
+                <tr><td style="padding:10px 0;border-bottom:1px solid #efe8de;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#7c746c;">Wedding date</td><td style="padding:10px 0;border-bottom:1px solid #efe8de;">{{wedding_date}}</td></tr>
+                <tr><td style="padding:10px 0;border-bottom:1px solid #efe8de;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#7c746c;">Package</td><td style="padding:10px 0;border-bottom:1px solid #efe8de;">{{package}}</td></tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:8px 40px 32px;">
+              <div style="font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#7c746c;margin-bottom:8px;">About the celebration</div>
+              <div style="font-family:Georgia,serif;font-size:16px;line-height:1.6;color:#28231f;white-space:pre-line;border-left:2px solid #b98d83;padding-left:16px;">{{message}}</div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0 40px 36px;" align="left">
+              <a href="mailto:{{from_email}}" style="display:inline-block;background-color:#28231f;color:#f7f4ef;font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;padding:14px 28px;border-radius:999px;">Reply to {{from_name}}</a>
+            </td>
+          </tr>
+          <tr>
+            <td style="background-color:#efe8de;padding:18px 40px;font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#7c746c;text-align:center;">
+              Also saved in Allure Admin › Halo &amp; Halo › Enquiries
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>

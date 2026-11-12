@@ -51,7 +51,15 @@ async function notifyByEmail(enquiry: Enquiry) {
   await emailjs.send(
     EMAILJS.serviceId,
     EMAILJS.templateId,
-    { ...enquiry, brand: "Halo & Halo Events" },
+    // Same variable names as Allure's template, plus `package`.
+    {
+      from_name: enquiry.name,
+      from_email: enquiry.email,
+      phone: enquiry.phone,
+      wedding_date: enquiry.date,
+      package: enquiry.package,
+      message: enquiry.message || "—",
+    },
     { publicKey: EMAILJS.publicKey },
   );
 }
